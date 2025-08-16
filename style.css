@@ -12,51 +12,73 @@ body {
 
 /* ======= Navigation ======= */
 header {
+    display: flex;
+    justify-content: flex-end; /* Aligns the navigation to the right */
+    align-items: center;
     background: #333;
     color: #fff;
-    padding: 10px 0;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
     list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
     padding: 0;
 }
 
-nav ul li {
+/* nav ul li {
     display: inline;
     margin-right: 20px;
-}
+} */
 
 nav ul li a {
-    color: #fff;
+    color: #333;
     text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #e67e22;
 }
 
 /* ======= Home Content ======= */
 section.home {
+    background: linear-gradient(to bottom, #ffe6cc, #fff);
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 2rem;
     padding: 4rem 2rem;
-    background-color: white;
+    flex-wrap: wrap;
 }
 
-.photo img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 2px solid #333;
+.home .photo img {
+    max-width: 250px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.bio {
+.home .bio {
     max-width: 600px;
 }
 
-.bio h1 {
+.home h1 {
     font-size: 2.5rem;
+    color: #d35400;
     margin-bottom: 1rem;
+}
+
+.home p {
+    font-size: 1.125rem;
+    color: #555;
+    margin-bottom: 1.5rem;
 }
 
 /* ======= Footer ======= */
